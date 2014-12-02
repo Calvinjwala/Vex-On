@@ -1,0 +1,16 @@
+<% include partials/header %>
+<% include partials/navbar %>
+
+<h1 class="title">VEXILOLOGY.</h1>
+<h3 class="subtitle">The love and study of flags.</h3>
+
+  <form action="/show" method="post">
+    <input name="flag[name]" placeholder="name" value="<%=name%>"><br>
+    <input name="flag[capital]" placeholder="capital" value="<%=capital%>"><br>
+   <textarea rows="4" cols="100" name="flag[info]" placeholder="info" value="<%=info%>"></textarea><br>
+    <input type="submit" value="Save">
+  </form>
+
+<a href="/show">Show</a>
+
+  <% include partials/footer %>

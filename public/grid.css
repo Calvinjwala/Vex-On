@@ -1,0 +1,191 @@
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
+body {
+    background: url(images/) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    letter-spacing: 2 em !important;
+    display: block;
+}
+
+div {
+    display: block;
+}
+
+#layout {
+    position: relative;
+}
+
+/* MENU STYLING */
+#menu {
+    left: 265px;
+}
+#menu {
+    margin-left: -265px;
+    position: fixed;
+    top: 0;
+/*    left: 0;*/
+    bottom: 0;
+    z-index: 1000;
+    background-color: #191818;
+    opacity: 0.9;
+    overflow-y: auto;
+    width: 265px;
+}
+
+#menu .pure-menu-open {
+    background: transparent;
+    border: 0;
+}
+
+#menu .pure-menu-heading {
+    font-size: 125%;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: #fff;
+    margin: 0 auto;
+    padding: 0.5em 0.8em;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #dfdfdf;
+    text-align: left;
+}
+
+.pure-menu.pure-menu-open {
+    visibility: visible;
+    z-index: 2;
+    width: 100%;
+}
+
+.pure-menu a {
+    font-size: 125%;
+    font-weight: 100;
+    color: white;
+    margin: 0 auto;
+}
+
+#countries {
+    font-size: 85%;
+    text-align: left;
+    font-weight: 100;
+    margin-left: 20px;
+}
+
+.pure-menu ul {
+    position: static !important;
+    visibility: visible !important;
+}
+
+/*.menu-link {
+    position: fixed;
+    left: 160px;
+    display: none;
+}
+
+.menu-link {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    background: #000;
+    background: rgba(0,0,0,0.7);
+    font-size: 11px;
+    z-index: 10;
+    width: 4em;
+    height: 4em;
+    padding: 1em;
+}*/
+
+.bottom_nav_link {
+    padding-top: 10px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #dfdfdf;
+}
+
+
+/* BODY (MAIN) STYLING */
+#main {
+    position: relative;
+    /*left: 250px;*/
+    padding-left: 250px;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Open Sans', 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
+    font-size: 65px;
+    margin-bottom: 0px;
+    color: white;
+    opacity: 0.9;
+    text-align: center;
+    clear: left
+}
+
+.subtitle {
+    font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
+    font-size: 25px;
+    margin-top: 5px;
+    color: white;
+    opacity: 0.9;
+    text-align: center;
+    clear: left;
+}
+
+.info {
+    font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
+    font-size: 18px;
+    margin-top: 40px;
+    color: white;
+    opacity: 0.9;
+    text-align: left;
+    margin: 0 auto;
+    width: 900px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+img {
+    height: 200px;
+    padding-top: 40px;
+}
+
+
+.title1 {
+    font-family: 'Open Sans', 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
+    font-size: 105px;
+    margin-bottom: 0px;
+    color: white;
+    opacity: 0.9;
+    text-align: center;
+    clear: left
+}
+
+.subtitle1 {
+    font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
+    font-size: 45px;
+    color: white;
+    opacity: 0.9;
+    text-align: center;
+    clear: left;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+button, input {
+    line-height: normal;
+    height: 50px;
+    width: 400px;
+    margin-top: 5px;
+    font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
+    text-align: center;
+}
+
+hr {
+    width: 700px;
+}
