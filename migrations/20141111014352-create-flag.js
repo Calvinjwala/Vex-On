@@ -20,6 +20,9 @@ module.exports = {
       info: {
         type: DataTypes.TEXT
       },
+      infoTwo: {
+        type: DataTypes.TEXT
+      },
       createdAt: {
         allowNull: false,
         type: DataTypes.DATE

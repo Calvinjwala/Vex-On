@@ -1,15 +1,13 @@
 <% include partials/header %>
 <% include partials/navbar %>
 
-<% allFlags.forEach(function(flag){ %>
-  <div class= "content">
-    <h1 class= "title"><%= flag.name %></h1>
-    <h4 class= "subtitle"><%= flag.capital %></h4>
-    <hr>
-    <img src="/images/<%= flag.name %>.png" alt="">
-    <p class= "info"><%= flag.info %></p>
-<% }); %>
-
-<a href="/new">New</a>
+<div class= "content">
+  <h1 class= "title"><%= flag.country %></h1>
+  <h4 class= "subtitle"><%= flag.capital %></h4>
+  <hr>
+  <img src="/images/<%= flag.country %>.png" alt="">
+  <p class= "info"><%= flag.info %><br><br><%= flag.infoTwo %></p>
 
 <% include partials/footer %>
+
+<%=  %>var url = $("#url_").html().split(/\s+,|\s+/).join('-');

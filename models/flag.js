@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     country: DataTypes.STRING,
     capital: DataTypes.STRING,
     continent:DataTypes.STRING,
-    info: DataTypes.TEXT
+    info: DataTypes.TEXT,
+    infoTwo: DataTypes.TEXT
   }, {
     classMethods: {
       associate: function(models) {

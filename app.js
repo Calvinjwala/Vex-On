@@ -36,25 +36,25 @@ app.get('/', function(req,res){
 });
 
 
-//SIMPLE ROUTE TO NEW PAGE
-app.get('/new', function(req,res){
-    res.render('new', {name:"",capital:"",info:""});
-});
+// //SIMPLE ROUTE TO NEW PAGE
+// app.get('/new', function(req,res){
+//     res.render('new', {name:"",capital:"",info:""});
+// });
 
-// THIS POSTS IT TO THE SHOW PAGE.
-app.post('/show', function(req,res){
-  var name = req.body.flag.name;
-  var capital = req.body.flag.capital;
-  var info = req.body.flag.info;
+// // THIS POSTS IT TO THE SHOW PAGE.
+// app.post('/show', function(req,res){
+//   var name = req.body.flag.name;
+//   var capital = req.body.flag.capital;
+//   var info = req.body.flag.info;
 
-  db.Flag.create({
-    name:name,
-    capital:capital,
-    info:info
-  }).success(function(){
-    res.redirect('/new');
-  });
-});
+//   db.Flag.create({
+//     name:name,
+//     capital:capital,
+//     info:info
+//   }).success(function(){
+//     res.redirect('/new');
+//   });
+// });
 
 //DISPLAY ALL THE FLAGS
 app.get('/show', function(req,res){
@@ -64,36 +64,14 @@ app.get('/show', function(req,res){
 });
 
 
-app.get('/<%=country.name%>', function(req,res){
-  var name = req.params.name;
-  if (Number(id) === req.user.id) {
-    res.redirect('/my_dreams');
-  }
-  db.User.find(id).done(function(err,user){
-    user.getPosts().done(function(err,post){
-      res.render('posts/show', {allPosts:post, user:user});
-      console.log(db.User);
-      });
+//SHOW THE FLAG PAGES AS SEPARATE DOMAINS
+app.get('/:country', function(req,res){
+  var country = req.params.country;
+  db.Flag.find({where: {country: country}}).done(function(err, flag){
+    res.render('country', {flag:flag});
   });
-  res.render('/country');
 });
 
-
-// individual routes
-
-app.get('/algeria', function(req,res){
-    res.render('World/Africa/algeria');
-});
-
-app.get('/uganda', function(req,res){
-    res.render('World/Africa/uganda');
-});
-
-app.get('/contact', function(req,res){
-    res.render('contact');
-});
-
-// curl --include --request GET "https://www.kimonolabs.com/api/9ncjc8vg?apikey=AbBlm8EDE6JLl1CRbrSPKjIG5wS5KBae"
 app.get('/contact', function(req,res){
     res.render('contact');
 });

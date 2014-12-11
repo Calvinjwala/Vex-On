@@ -69,10 +69,10 @@ div {
 }
 
 #countries {
-    font-size: 85%;
+    font-size: 80%;
     text-align: left;
     font-weight: 100;
-    margin-left: 20px;
+    margin-left: 12px;
 }
 
 .pure-menu ul {
@@ -188,4 +188,8 @@ button, input {
 
 hr {
     width: 700px;
+}
+
+.flag {
+    display: inline-block;
 }
