@@ -143,7 +143,7 @@ var flag_info = [
 {"Continent":"Europe","Country":"Serbia ","Capital":"Belgrade ","Information":"x"},
 {"Continent":"Europe","Country":"Slovakia ","Capital":"Bratislava ","Information":"x"},
 {"Continent":"Europe","Country":"Slovenia ","Capital":"Ljubljana ","Information":"x"},
-{"Continent":"Europe","Country":"Spain","Capital":"Madrid ","Information":"x"},
+{"Continent":"Europe","Country":"Spain ","Capital":"Madrid ","Information":"x"},
 {"Continent":"Europe","Country":"Sweden ","Capital":"Stockholm ","Information":"x"},
 {"Continent":"Europe","Country":"Switzerland ","Capital":"Bern ","Information":"x"},
 {"Continent":"Europe","Country":"Turkey ","Capital":"Ankara ","Information":"x"},
