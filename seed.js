@@ -203,11 +203,12 @@ var flag_info = [
 
 flag_info.forEach(function (info) {
   var transform = {
+    continent: info.continent,
     country: info.country,
     capital: info.capital,
-    continent: info.continent,
-    info: info.information,
-    infoTwo: infoTwo.information
+    info: info.info,
+    infoTwo: info.infoTwo
   };
   db.Flag.create(transform);
+  console.log("Success!");
 });

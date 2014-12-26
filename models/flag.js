@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
   var Flag = sequelize.define("Flag", {
     country: DataTypes.STRING,
     capital: DataTypes.STRING,
-    continent:DataTypes.STRING,
+    continent: DataTypes.STRING,
     info: DataTypes.TEXT,
     infoTwo: DataTypes.TEXT,
   }, {
