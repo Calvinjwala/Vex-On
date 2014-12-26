@@ -1,12 +1,12 @@
 <% include partials/header %>
 <% include partials/navbar %>
 
-<div class= "content">
-  <h2 class="title"> <%= flag.continent %> </h2>
-  <h2 class= "title"><%= flag.country %></h1>
-  <h4 class= "subtitle"><%= flag.capital %></h4>
+<div>
+  <div class="continent"> <%= flag.continent %>
+  <h3 class= "country"><%= flag.country %></h3>
+  <h4 class= "capital"><%= flag.capital %></h4>
+  <img class= "flagImage" src="/images/<%= flag.country %>.png" alt="">
   <hr>
-  <img src="/images/<%= flag.country %>.png" alt="">
   <p class= "info">
     <%= flag.info %>
     <br><br>

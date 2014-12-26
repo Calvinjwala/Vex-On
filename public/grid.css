@@ -116,19 +116,19 @@ div {
     text-align: center;
 }
 
-.title {
-    font-family: 'Open Sans', 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
-    font-size: 65px;
+.continent {
+    font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
+    font-size: 35px;
     margin-bottom: 0px;
     color: white;
     opacity: 0.9;
     text-align: center;
-    clear: left
+    clear: left;
 }
 
-.subtitle {
+.country {
     font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
-    font-size: 25px;
+    font-size: 30px;
     margin-top: 5px;
     color: white;
     opacity: 0.9;
@@ -136,10 +136,25 @@ div {
     clear: left;
 }
 
+.capital {
+    font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
+    font-size: 25px;
+    /*margin-top: 5px;*/
+    color: white;
+    opacity: 0.9;
+    text-align: center;
+    clear: left;
+
+}
+
+.flagImage {
+
+}
+
 .info {
     font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
     font-size: 18px;
-    margin-top: 40px;
+    margin-top: 20px;
     color: white;
     opacity: 0.9;
     text-align: left;
@@ -147,6 +162,7 @@ div {
     width: 900px;
     padding: 10px;
     background: rgba(0, 0, 0, 0.8);
+    clear: left;
 }
 
 

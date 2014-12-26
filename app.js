@@ -67,6 +67,7 @@ app.get('/show', function(req,res){
 //SHOW THE FLAG PAGES AS SEPARATE DOMAINS
 app.get('/:country', function(req,res){
   var country = req.params.country;
+  country.replace(/ /g,"_");
   db.Flag.find({where: {country: country}}).done(function(err, flag){
     res.render('country', {flag:flag});
   });
