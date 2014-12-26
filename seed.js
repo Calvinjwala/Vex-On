@@ -211,4 +211,3 @@ flag_info.forEach(function (info) {
   };
   db.Flag.create(transform);
 });
-
