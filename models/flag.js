@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
     capital: DataTypes.STRING,
     continent:DataTypes.STRING,
     info: DataTypes.TEXT,
-    infoTwo: DataTypes.TEXT
+    infoTwo: DataTypes.TEXT,
   }, {
     classMethods: {
       associate: function(models) {
