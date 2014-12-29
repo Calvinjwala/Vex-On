@@ -21,6 +21,135 @@ div {
 }
 
 /* MENU STYLING */
+
+#layout,
+#menu,
+.menu-link {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+#layout.active .menu-link {
+    left: 260px;
+}
+
+#menu {
+    margin-left: -260px; /* "#menu" width */
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000; /* so the menu or its navicon stays above all content */
+    background: #191818;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+    #menu a {
+        color: #999;
+        border: none;
+        white-space: normal;
+        padding: 0.625em 1em;
+    }
+
+    #menu .pure-menu-open {
+        background: transparent;
+        border: 0;
+    }
+
+    #menu .pure-menu ul {
+        border: none;
+        background: transparent;
+    }
+
+    #menu .pure-menu ul,
+    #menu .pure-menu .menu-item-divided {
+        border-top: 1px solid #333;
+    }
+
+        #menu .pure-menu li a:hover,
+        #menu .pure-menu li a:focus {
+            background: #333;
+        }
+
+    .menu-link {
+        position: fixed;
+        display: block; /* show this only on small screens */
+        top: 0;
+        left: 0; /* "#menu width" */
+        background: #000;
+        background: rgba(0,0,0,0.7);
+        font-size: 11px; /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 4em;
+        height: 4em;
+        padding: 1em;
+        visibility: hidden;
+    }
+    @media screen and (max-width: 824px) {
+    .menu-link {
+        visibility: visible;
+        }
+    }
+        .menu-link:hover,
+        .menu-link:focus {
+            background: #000;
+        }
+
+        .menu-link span {
+            position: relative;
+            display: block;
+            margin-top: 0.9em;
+        }
+
+        .menu-link span,
+        .menu-link span:before,
+        .menu-link span:after {
+            background-color: #fff;
+            width: 100%;
+            height: .2em;
+            -webkit-transition: all 0.4s;
+               -moz-transition: all 0.4s;
+                -ms-transition: all 0.4s;
+                 -o-transition: all 0.4s;
+                    transition: all 0.4s;
+        }
+
+            .menu-link span:before,
+            .menu-link span:after {
+                position: absolute;
+                top: -.55em;
+                content: " ";
+            }
+
+            .menu-link span:after {
+                top: .55em;
+            }
+
+        .menu-link.active span {
+            background: transparent;
+        }
+
+            .menu-link.active span:before {
+                -webkit-transform: rotate(45deg) translate(.5em, .4em);
+                   -moz-transform: rotate(45deg) translate(.5em, .4em);
+                    -ms-transform: rotate(45deg) translate(.5em, .4em);
+                     -o-transform: rotate(45deg) translate(.5em, .4em);
+                        transform: rotate(45deg) translate(.5em, .4em);
+            }
+
+            .menu-link.active span:after {
+                -webkit-transform: rotate(-45deg) translate(.4em, -.3em);
+                   -moz-transform: rotate(-45deg) translate(.4em, -.3em);
+                    -ms-transform: rotate(-45deg) translate(.4em, -.3em);
+                     -o-transform: rotate(-45deg) translate(.4em, -.3em);
+                        transform: rotate(-45deg) translate(.4em, -.3em);
+            }
+
+
 #menu {
     left: 265px;
 }
@@ -28,7 +157,6 @@ div {
     margin-left: -265px;
     position: fixed;
     top: 0;
-/*    left: 0;*/
     bottom: 0;
     z-index: 1000;
     background-color: #191818;
@@ -37,10 +165,23 @@ div {
     width: 265px;
 }
 
+#countries {
+    font-size: 80%;
+    text-align: left;
+    font-weight: 100;
+    margin-left: 12px;
+}
+
 #menu .pure-menu-open {
     background: transparent;
     border: 0;
 }
+@media screen and (max-width: 824px) {
+    #menu {
+        display: none !important;
+    }
+}
+
 
 #menu .pure-menu-heading {
     font-size: 125%;
@@ -66,13 +207,6 @@ div {
     font-weight: 100;
     color: white;
     margin: 0 auto;
-}
-
-#countries {
-    font-size: 80%;
-    text-align: left;
-    font-weight: 100;
-    margin-left: 12px;
 }
 
 .pure-menu ul {
@@ -108,18 +242,50 @@ div {
 }
 
 
-/* BODY (MAIN) STYLING */
+/* BODY (MAIN) STYLING COUNTRY COUNTRY */
+/*.menu-link {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    background: #000;
+    background: rgba(0,0,0,0.7);
+    font-size: 11px;
+    z-index: 10;
+    width: 4em;
+    height: 4em;
+    padding: 1em;
+}
+
+#layout.active .menu-link {
+left: 160px;
+}*/
+
 #main {
     position: relative;
-    /*left: 250px;*/
     padding-left: 250px;
     text-align: center;
+}
+@media screen and (max-width: 824px) {
+    #main {
+       padding-left: 0px;
+    }
+}
+
+.content {
+    display: inline-block;
+    padding-right: 30px;
+}
+@media screen and (max-width: 466px) {
+    .content {
+       padding-right: 0px;
+    }
 }
 
 .continent {
     font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
     font-size: 35px;
-    margin-bottom: 0px;
+    margin-bottom: 15px;
     color: white;
     opacity: 0.9;
     text-align: center;
@@ -129,7 +295,8 @@ div {
 .country {
     font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
     font-size: 30px;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 15px;
     color: white;
     opacity: 0.9;
     text-align: center;
@@ -139,40 +306,46 @@ div {
 .capital {
     font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
     font-size: 25px;
-    /*margin-top: 5px;*/
     color: white;
     opacity: 0.9;
     text-align: center;
     clear: left;
-
-}
-
-.flagImage {
-
+    margin-top: 0px;
 }
 
 .info {
     font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
-    font-size: 18px;
+    /*font-size: 18px;*/
     margin-top: 20px;
     color: white;
     opacity: 0.9;
     text-align: left;
     margin: 0 auto;
-    width: 900px;
+    max-width: 900px;
     padding: 10px;
     background: rgba(0, 0, 0, 0.8);
     clear: left;
 }
 
+hr {
+    width: 700px;
+}
 
-img {
-    height: 200px;
-    padding-top: 40px;
+.flag {
+    display: inline-block;
+    float: top;
+    margin-top: 30px;
+    padding-left: 20px;
+}
+@media screen and (max-width: 466px) {
+    .flag {
+       padding-left: 0px;
+    }
 }
 
 
-.title1 {
+/* INDEX PAGE STYLING*/
+.title {
     font-family: 'Open Sans', 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
     font-size: 105px;
     margin-bottom: 0px;
@@ -181,8 +354,13 @@ img {
     text-align: center;
     clear: left
 }
+@media screen and (max-width: 670px) {
+    .title {
+       font-size: 50px;
+    }
+}
 
-.subtitle1 {
+.subtitle {
     font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
     font-size: 45px;
     color: white;
@@ -200,12 +378,4 @@ button, input {
     margin-top: 5px;
     font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
     text-align: center;
-}
-
-hr {
-    width: 700px;
-}
-
-.flag {
-    display: inline-block;
 }

@@ -57,21 +57,11 @@ app.get('/', function(req,res){
 // });
 
 //DISPLAY ALL THE FLAGS
-app.get('/show', function(req,res){
-  db.Flag.findAll().done(function(err, flag){
-    res.render('show', {allFlags: flag});
-  });
-});
-
-
-//SHOW THE FLAG PAGES AS SEPARATE DOMAINS
-app.get('/:country', function(req,res){
-  var country = req.params.country;
-  country.replace(/ /g,"_");
-  db.Flag.find({where: {country: country}}).done(function(err, flag){
-    res.render('country', {flag:flag});
-  });
-});
+// app.get('/show', function(req,res){
+//   db.Flag.findAll().done(function(err, flag){
+//     res.render('show', {allFlags: flag});
+//   });
+// });
 
 app.get('/contact', function(req,res){
     res.render('contact');
@@ -79,6 +69,14 @@ app.get('/contact', function(req,res){
 
 app.get('/about', function(req,res){
     res.render('about');
+});
+
+//SHOW THE FLAG PAGES AS SEPARATE DOMAINS
+app.get('/:country', function(req,res){
+  var country = req.params.country;
+  db.Flag.find({where: {country: country}}).done(function(err, flag){
+    res.render('country', {flag:flag});
+  });
 });
 
 app.get('*', function(req,res){
