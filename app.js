@@ -85,5 +85,5 @@ app.get('*', function(req,res){
 });
 
 app.listen(process.env.PORT || 3000, function(){
-  console.log("get this party started on port 3000");
+  console.log("get this party started on port 80");
 });
