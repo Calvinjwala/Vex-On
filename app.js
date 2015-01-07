@@ -14,7 +14,6 @@ var express = require("express"),
   mysql = require("mysql"),
   nodemon = require("nodemon"),
   cheerio = require("cheerio"),
-  sequelizeCli = require("sequelize-cli");
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
