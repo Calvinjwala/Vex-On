@@ -78,9 +78,12 @@ app.get('/about', function(req,res){
 });
 
 //SHOW THE FLAG PAGES AS SEPARATE DOMAINS
-app.get('/:country', function(req,res){
+app.get('/country/:country', function(req,res){
+
   var country = req.params.country;
+  console.log("PARAMS", country)
   db.Flag.find({where: {country: country}}).done(function(err, flag){
+    console.log(flag)
     res.render('country', {flag:flag});
   });
 });
