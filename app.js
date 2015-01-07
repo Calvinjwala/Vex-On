@@ -13,7 +13,8 @@ var express = require("express"),
   request = require("request"),
   mysql = require("mysql"),
   nodemon = require("nodemon"),
-  cheerio = require("cheerio");
+  cheerio = require("cheerio"),
+  sequelizeCli = require("sequelize-cli");
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
