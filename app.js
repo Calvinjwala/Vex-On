@@ -82,7 +82,7 @@ app.get('/:continent/:country', function(req,res){
   var continent = req.params.continent;
   var country = req.params.country;
   db.Flag.find({where: {continent: continent, country: country}}).done(function(err, flag){
-    console.log(flag);
+    console.log("this is the country information:", flag);
     res.render('country', {flag:flag});
   });
 });
