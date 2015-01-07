@@ -78,12 +78,11 @@ app.get('/about', function(req,res){
 });
 
 //SHOW THE FLAG PAGES AS SEPARATE DOMAINS
-app.get('/country/:country', function(req,res){
-
+app.get('/:continent/:country', function(req,res){
+  var continent = req.params.continent;
   var country = req.params.country;
-  console.log("PARAMS", country)
-  db.Flag.find({where: {country: country}}).done(function(err, flag){
-    console.log(flag)
+  db.Flag.find({where: {continent: continent, country: country}}).done(function(err, flag){
+    console.log(flag);
     res.render('country', {flag:flag});
   });
 });
