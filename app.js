@@ -81,17 +81,19 @@ app.get('/about', function(req,res){
 app.get('/:continent/:country', function(req,res){
   var continent = req.params.continent;
   var country = req.params.country;
-  var total = country.length;
-  var current = 0;
+  var asyncTotal = country.length;
+  var asyncLoser = 0;
+  console.log(asyncTotal);
   db.Flag.find({where: {continent: continent, country: country}}).done(function(err, flag){
-    console.log("this is the country information:", flag);
-    current++;
-    if (current >= total) {
-      console.log("this async function really worked!");
-      res.render('country', {flag:flag});
+    // console.log("this is the country information:", flag);
+    asyncLoser++;
+    console.log(asyncLoser);
+    if (asyncTotal > asyncLoser) {
+    res.render('country', {flag:flag});
     }
   });
 });
+
 
 
 app.get('*', function(req,res){
