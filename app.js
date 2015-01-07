@@ -14,6 +14,7 @@ var express = require("express"),
   mysql = require("mysql"),
   nodemon = require("nodemon"),
   cheerio = require("cheerio"),
+  sequelizeCli = require("sequelize-cli");
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
@@ -84,6 +85,7 @@ app.get('/:continent/:country', function(req,res){
   var asyncTotal = country.length;
   var asyncLoser = 0;
   console.log("asyncTotal: ", asyncTotal);
+  // does the database name have to change?
   db.Flag.find({where: {continent: continent, country: country}}).done(function(err, flag){
     console.log("this is the flag information:", flag);
     asyncLoser++;
