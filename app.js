@@ -5,9 +5,15 @@ var express = require("express"),
   db = require("./models/index"),
   methodOverride = require("method-override"),
   morgan = require("morgan"),
-  locus = require("locus");
-  request = require('request');
-  cheerio = require('cheerio');
+  locus = require("locus"),
+  lodash = require("lodash"),
+  pg = require("pg"),
+  ejs = require("ejs"),
+  trianglify = require("trianglify"),
+  request = require("request"),
+  mysql = require("mysql"),
+  nodemon = require("nodemon"),
+  cheerio = require("cheerio");
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
