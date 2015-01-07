@@ -83,13 +83,14 @@ app.get('/:continent/:country', function(req,res){
   var country = req.params.country;
   var asyncTotal = country.length;
   var asyncLoser = 0;
-  console.log(asyncTotal);
+  console.log("asyncTotal: ", asyncTotal);
   db.Flag.find({where: {continent: continent, country: country}}).done(function(err, flag){
-    // console.log("this is the country information:", flag);
+    console.log("this is the flag information:", flag);
     asyncLoser++;
-    console.log(asyncLoser);
+    console.log("asyncLoser: ", asyncLoser);
     if (asyncTotal > asyncLoser) {
     res.render('country', {flag:flag});
+    console.log("hoorah, it works!");
     }
   });
 });
