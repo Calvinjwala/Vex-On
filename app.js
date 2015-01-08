@@ -78,7 +78,7 @@ app.get('/about', function(req,res){
 });
 
 //SHOW THE FLAG PAGES AS SEPARATE DOMAINS
-app.get('/world/:continent/:country', function(req,res){
+app.get('/:continent/:country', function(req,res){
   var continent = req.params.continent;
   var country = req.params.country;
   var asyncTotal = country.length;
