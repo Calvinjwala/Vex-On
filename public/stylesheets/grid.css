@@ -272,10 +272,19 @@ left: 160px;
     }
 }
 
+.top {
+    width: 700px;
+    margin-right: 165px;
+    margin-left: 165px;
+
+}
+
 .content {
     display: inline-block;
-    padding-right: 30px;
+    position: relative;
+    text-align: left;
 }
+
 @media screen and (max-width: 466px) {
     .content {
        padding-right: 0px;
@@ -285,45 +294,47 @@ left: 160px;
 .continent {
     font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
     font-size: 35px;
+    text-shadow: 1px 1px 1px #000;
     margin-bottom: 15px;
     color: white;
     opacity: 0.9;
-    text-align: center;
     clear: left;
+    max-width: 96%;
 }
 
 .country {
     font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
     font-size: 30px;
+    text-shadow: 1px 1px 1px #000;
     margin-top: 10px;
     margin-bottom: 15px;
     color: white;
     opacity: 0.9;
-    text-align: center;
     clear: left;
+    max-width: 96%;
 }
 
 .capital {
     font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
     font-size: 25px;
+    text-shadow: 1px 1px 1px #000;
     color: white;
     opacity: 0.9;
-    text-align: center;
     clear: left;
     margin-top: 0px;
 }
 
 .info {
     font-family: 'Open Sans', ‘Metrophobic’, Arial, serif; font-weight: 300;
-    /*font-size: 18px;*/
+    text-shadow: 1px 1px 1px #000;
     margin-top: 20px;
     color: white;
     opacity: 0.9;
     text-align: left;
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 680px;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.1);
     clear: left;
 }
 
@@ -335,8 +346,10 @@ hr {
     display: inline-block;
     float: top;
     margin-top: 30px;
-    padding-left: 20px;
+    margin-left: 40px;
+    text-align: center;
 }
+
 @media screen and (max-width: 466px) {
     .flag {
        padding-left: 0px;

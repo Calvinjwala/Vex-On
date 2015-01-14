@@ -10,16 +10,16 @@ var db        = {};
 
 if (process.env.HEROKU_POSTGRESQL_COPPER_URL) {
     // the application is executed on Heroku ... use the postgres database
-    var match = process.env.HEROKU_POSTGRESQL_COPPER_URL.match(/postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/)
+  var match = process.env.HEROKU_POSTGRESQL_COPPER_URL.match(/postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/)
 
-    sequelize = new Sequelize(match[5], match[1], match[2], {
-      dialect:  'postgres',
-      protocol: 'postgres',
-      port:     match[4],
-      host:     match[3],
-      logging:  true //false
-    })
-  }
+  sequelize = new Sequelize(match[5], match[1], match[2], {
+    dialect:  'postgres',
+    protocol: 'postgres',
+    port:     match[4],
+    host:     match[3],
+    logging:  true //false
+  });
+}
 
 fs
   .readdirSync(__dirname)
